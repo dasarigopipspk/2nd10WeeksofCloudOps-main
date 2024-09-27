@@ -4,17 +4,17 @@ pipeline {
         string(name: 'ACTION', defaultValue: 'apply', description: 'Terraform action: apply or destroy')    
     }
     stages {
-        stage('Checkout from Git'){
+        stage('Checkout from Git') {
             steps{
                 echo 'git checkout'
             }
         }
-        stage('Terraform version'){
+        stage('Terraform version') {
              steps{
                  sh 'terraform --version'
              }
         }
-        stage('Terraform init'){
+        stage('Terraform init') {
              steps{
                  dir('eks-terraform') {
                  sh 'terraform init -upgrade'  
