@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "headlesspoint"
-    key    = "aws/terraform.tfstate"
+    key    = "aws-1/terraform.tfstate"
     region = "us-east-1"
   }
 
